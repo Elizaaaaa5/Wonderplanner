@@ -1,4 +1,4 @@
-# This is the readme file for template we are using. 
+This is the readme file for template we are using. 
 
 Escape Velocity by HTML5 UP
 html5up.net | @ajlkn
