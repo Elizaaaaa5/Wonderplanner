@@ -59,21 +59,22 @@ if (isset($_POST['reg_user'])) {
     if (count($errors) == 0) {
     	$password = md5($password_1);//encrypt the password before saving in the database
 
-    	$query = "INSERT INTO users (first_name, last_name, email, password, dob)
-    			  VALUES('$username', '$email', '$password')";
-    	mysqli_query($db, $query);
+    	$sql = "INSERT INTO users (first_name, last_name, email, password, dob)
+    			  VALUES('$first_name', '$last_name', '$email','$password', '$dob')";
+    	mysqli_query($db, $sql);
     	$_SESSION['$fist_name'] = $first_name;
       $_SESSION['$last_name'] = $last_name;
     	$_SESSION['success'] = "You are now logged in";
     	header('location: Sign_up.php');
     }
-  }
 
-  if ($conn->query($sql) === TRUE) {
+
+  if ($conn->query(sql) === TRUE) {
       echo "New record created successfully";
   } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
+      echo "Error: " . sql . "<br>" . $conn->error;
   }
+}
 
   $conn->close();
   ?>
