@@ -61,19 +61,23 @@
 						<form method="post" action="#" >
 							<div class="row 50%">
 									<div class="6u 12u(mobile)">
+										<label for="name" align="left">First Name</label>
 										<input  type="text" pattern="^[a-zA-Z0-9._-]{3,}$" name="name" id="contact-name" placeholder="First Name" required>
 									</div>
 									<div class="6u 12u(mobile)">
+										<label for="lname" align="left">Last Name</label>
 										<input type="text"  pattern="^[a-zA-Z0-9._-]{3,}$" name="lname" id="contact-lname" placeholder="Last Name" required>
 									</div>
 								</div>
 								<div class="row">
 									<div class="12u">
+										<label for="email" align="left">Email</label>
 										<input type="text"  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="email" id="contact-email" placeholder="Email" required>
 									</div>
 								</div>
 								<div class="row">
 									<div class="12u">
+										<label for="password" align="left">Password</label>
 										<input type="text"  name="password" id="contact-password" placeholder="Password"
 										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one
 										number and one uppercase and lowercase letter, and at least 8 or more characters" required>
@@ -81,30 +85,35 @@
 								</div>
 								<div class="row">
 									<div class="12u">
+										<label for="password2" align="left">Comfirm Password</label>
 										<input type="text"  name="password2" id="contact-password2" onchange="validatePassword()"placeholder="Confirm Password" required>
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="12u">
+										<label for="address" align="left">Address</label>
 										<input type="text" name="address" id="contact-address" pattern="/^\\d+ [a-zA-Z ]+, \\d+ [a-zA-Z ]+, [a-zA-Z ]+$/" placeholder="Address"required>
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="12u">
+										<label for="city" align="left">City</label>
 										<input type="text" name="city" id="contact-city" placeholder="City" pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$"required>
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="12u">
+										<label for="state" align="left">State</label>
 										<input type="text" name="state" id="contact-state" placeholder="State" pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$"required>
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="12u">
+										<label for="zipcode" align="left">Zipcode</label>
 										<input type="text" name="zipcode" id="contact-zipcode" placeholder="Zipcode" pattern="^\d{5}(?:[-\s]\d{4})?$"required>
 									</div>
 								</div>
