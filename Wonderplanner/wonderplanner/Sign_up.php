@@ -1,3 +1,4 @@
+
 <?php include('server.php') ?>
 
 <!DOCTYPE HTML>
@@ -18,7 +19,7 @@
 		<!--<link rel="icon" type="image/png" href="assets/Login_v1/images/icons/favicon.ico"/>-->
 		<!--===============================================================================================-->
 		<!--<link rel="stylesheet" type="text/css" href="assets/Login_v1/vendor/bootstrap/css/bootstrap.min.css">
-		<!--===============================================================================================-->
+		<!===============================================================================================-->
 			<!--<link rel="stylesheet" type="text/css" href="assets/Login_v1/fonts/font-awesome-4.7.0/css/font-awesome.min.css">-->
 		<!--===============================================================================================-->
 			<link rel="stylesheet" type="text/css" href="assets/Login_v1/vendor/animate/animate.css">
@@ -29,7 +30,7 @@
 		<!--===============================================================================================-->
 			<link rel="stylesheet" type="text/css" href="assets/Login_v1/css/util.css">
 			<!--<link rel="stylesheet" type="text/css" href="assets/Login_v1/css/main.css">
-		<!--===============================================================================================-->
+		<!==============================================================================================-->
 
 	</head>
 	<body class="homepage">
@@ -86,9 +87,29 @@
 
 								<div class="row">
 									<div class="12u">
-										<input type="text" pattern="^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$" name="dob" id="contact-dob" placeholder="Date of Birth: MM/DD/YYYY" required>
+										<input type="text" name="address" id="contact-address" pattern="/^\\d+ [a-zA-Z ]+, \\d+ [a-zA-Z ]+, [a-zA-Z ]+$/" placeholder="Address"required>
 									</div>
 								</div>
+
+								<div class="row">
+									<div class="12u">
+										<input type="text" name="city" id="contact-city" placeholder="City" pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$"required>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="12u">
+										<input type="text" name="state" id="contact-state" placeholder="State" pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$"required>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="12u">
+										<input type="text" name="zipcode" id="contact-zipcode" placeholder="Zipcode" pattern="^\d{5}(?:[-\s]\d{4})?$"required>
+									</div>
+								</div>
+
+
 
 								<div class="row">
 								<div class="12u">
@@ -138,7 +159,6 @@
 				<script>
 					var password = document.getElementById("contact-password")
 					  , confirm_password = document.getElementById("contact-password2");
-
 					function validatePassword(){
 					  if(password.value != confirm_password.value) {
 					    confirm_password.setCustomValidity("Passwords Do Not Match");
@@ -152,17 +172,14 @@
 				var capital = document.getElementById("capital");
 				var number = document.getElementById("number");
 				var length = document.getElementById("length");
-
 				// When the user clicks on the password field, show the message box
 				pass.onfocus = function() {
 				  document.getElementById("message").style.display = "block";
 				}
-
 				// When the user clicks outside of the password field, hide the message box
 				pass.onblur = function() {
 				  document.getElementById("message").style.display = "none";
 				}
-
 				// When the user starts to type something inside the password field
 				pass.onkeyup = function() {
 				  // Validate lowercase letters
@@ -174,7 +191,6 @@
 				    letter.classList.remove("valid");
 				    letter.classList.add("invalid");
 				}
-
 				  // Validate capital letters
 				  var upperCaseLetters = /[A-Z]/g;
 				  if(pass.value.match(upperCaseLetters)) {
@@ -184,7 +200,6 @@
 				    capital.classList.remove("valid");
 				    capital.classList.add("invalid");
 				  }
-
 				  // Validate numbers
 				  var numbers = /[0-9]/g;
 				  if(pass.value.match(numbers)) {
@@ -194,7 +209,6 @@
 				    number.classList.remove("valid");
 				    number.classList.add("invalid");
 				  }
-
 				  // Validate length
 				  if(pass.value.length >= 8) {
 				    length.classList.remove("invalid");
@@ -203,7 +217,6 @@
 				    length.classList.remove("valid");
 				    length.classList.add("invalid");
 				  }
-
 				}
 				</script>
 	</body>
