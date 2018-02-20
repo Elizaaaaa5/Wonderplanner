@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "1123";
 $dbname = "wonderplanner";
 
 // Create connection
@@ -9,6 +9,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
+    echo "connection failed";
 }
 
 // initializing variables
