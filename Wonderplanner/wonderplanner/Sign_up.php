@@ -78,7 +78,7 @@
 								<div class="row">
 									<div class="12u">
 										<label for="password" align="left">Password</label>
-										<input type="text"  name="password" id="contact-password" placeholder="Password"
+										<input type="password"  name="password" id="contact-password" placeholder="Password"
 										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one
 										number and one uppercase and lowercase letter, and at least 8 or more characters" required>
 									</div>
@@ -86,7 +86,7 @@
 								<div class="row">
 									<div class="12u">
 										<label for="password2" align="left">Comfirm Password</label>
-										<input type="text"  name="password2" id="contact-password2" onchange="validatePassword()"placeholder="Confirm Password" required>
+										<input type="password" name="password2" id="contact-password2" onchange="validatePassword()"placeholder="Confirm Password" required>
 									</div>
 								</div>
 
