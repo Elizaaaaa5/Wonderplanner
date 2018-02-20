@@ -26,7 +26,7 @@
 			<!-- Main -->
 				<div class="wrapper style2">
 					<div class="title">ABOUT US</div>
-					
+
 					<div id="main" class="container">
 						<div class="row 150%">
 							<div class="8u 12u(mobile)">
@@ -36,44 +36,55 @@
 											<header class="style1">
 												<h2>OUR MISSION</h2>
 											</header>
-                                            <p>
+																						<p>
 												Tired of Yelp and making calls for reservations? Wonder Planner takes the hassle out
-                                                of making plans with others.
-											
-                                            </p>
+																								of making plans with others.
+
+																						</p>
 											<p>
-                                                     To use Wonder Planner, simply create an account, log on when
-                                                you need to plan an event, take our special questionnaire, receive
-                                                a variety of options for personalized event plans, choose your
-                                                favorite package, and expect to receive all package items in the
-                                                mail <strong>within 1-5 business days!</strong>
-                                                    </p>
-                                            <p>
+																										 To use Wonder Planner, create an account, log on when
+																								you need to plan an event, take our special questionnaire, receive
+																								options for personalized event plans, choose your
+																								favorite package, and receive all package items in the
+																								mail <strong>within 1-5 business days!</strong>
+											</p>
+																		<header>
+														<h2>Unique Selling Proposition</h2>
+													</header>
+
+							<p>
+																												Let Wonder Planner’s <strong>unique algorithms and machine learning</strong> save
+																												you the time and effort of planning and help you have the perfect
+																												time with others for less!
+
+																										</p>
+
+																						<p>
 											<div align ="center">
 											<article class="8u 24u(mobile) special">
 												<a href="#" class="image featured"><img src="images/womanlaptop.jpg" alt="" /></a>
 											</article>
 											</div>
-                                                Event packages cater to events
-                                                including <strong>
-                                                    birthdays, dates, reunions, business meetings,
-                                                    and more
-                                                </strong>
-                                                and can contain features such as restaurant reservations, tickets
-                                                to events, and lodging plans.
-                                            </p>
-                                            <p>
-                                                For <strong>premium users</strong> , we also offer
-                                                <strong>special items in packages</strong> such as chocolates, flowers, and gifts.
-                                                Each package is <strong>customizable</strong> and also allow for you to share
-                                                itineraries with others and confirm attendance and reservations.
-                                            </p>
+																								Event packages cater to events
+																								including <strong>
+																										birthdays, dates, reunions, business meetings,
+																										and more
+																								</strong>
+																								and can contain features such as restaurant reservations, tickets
+																								to events, and lodging plans.
+																						</p>
+																						<p>
+																								For <strong>premium users</strong> , we also offer
+																								<strong>special items in packages</strong> such as chocolates, flowers, and gifts.
+																								Each package is <strong>customizable</strong> and also allow for you to share
+																								itineraries with others and confirm attendance and reservations.
+																						</p>
 								<div align="center">
 							<article class="8u 24u(mobile) special">
 								<a href="#" class="image featured"><img src="images/friends.jpg" alt="" /></a>
 							</article>
 							</div>
-											
+
 										</article>
 										<div class="row 150%">
 											<div class="6u 12u(mobile)">
@@ -81,17 +92,16 @@
 													<header>
 														<h2>Planning without the Hassle</h2>
 													</header>
-                                               
-                                                    <p>
-                                                        In order to <strong>save time</strong> for ourselves and make the decision-making process
-                                                        easier, we created Wonder Planner. <strong>Simple and efficient,</strong>
-                                                        we hope to make event planning less of a hassle for the everyday person.
-                                                    </p>
-                                                    <p>
-                                                        Our goal is to make sure that you have <strong>the best time</strong> at your event, communicate seamlessly between groups,
-                                                        and save money along the way.
-                                                   </p>
-												
+
+																										<p>
+																											We created Wonder Planner to <strong>save you time</strong> during plan-making and make the process
+									<strong>simple and efficient</strong> .
+																										</p>
+																										<p>
+																												<strong>Our goal:</strong> for you to have the best time at your event, communicate seamlessly between groups,
+																												and save money along the way.
+																									 </p>
+
 												</section>
 											</div>
 											<div class="6u 12u(mobile)">
@@ -99,28 +109,19 @@
 													<header>
 														<h2>Why Wonder Planner?</h2>
 													</header>
-													<p>Wonder Planner stems from a problem that we began to notice as we 
-                                                    grew older: making plans with others can be very difficult. With Wonder 
-                                                    Planner, we are making life easier for people who just want to have more
-                                                    <Strong>fun</Strong> and <font color="red">no <Strike>hassle.</Strike></font>
-													
-													<header>
-														<h2>Unique Selling Proposition</h2>
-													</header>
-													<p>
-                                                        Let Wonder Planner’s <strong>unique algorithms and machine learning</strong> save 
-                                                        you the time and effort of planning and help you have the perfect 
-                                                        time with others for less!
+													<p>We noticed a key problem as we
+																										grew older: making plans with others can be very difficult. With Wonder
+																										Planner, we make life easier for people who want more
+																										<Strong>fun</Strong> and <font color="red">less hassle.</font>
 
-                                                    </p>
-                                                    <p>
-                                                        We <strong>partner</strong> with a variety of business to provide special discounts
-                                                         on events and reservations so we're always trying to save the most money 
-                                                         for you.
-                                                    </p>
-                                                        
-                                                    </p>
-													
+
+																										<p>
+																												We <strong>partner</strong> with businesses to provide special discounts
+																												 on events and reservations, always saving you money.
+																										</p>
+
+																										</p>
+
 												</section>
 											</div>
 										</div>
@@ -192,7 +193,7 @@
 						</div>
 					</div>
 				</div>
-            
+
 
 			<!-- Highlights -->
 				<div class="wrapper style3">
