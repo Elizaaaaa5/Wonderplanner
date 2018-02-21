@@ -228,3 +228,15 @@ textarea {
     left: -35px;
     content: "&#10006;";
 }
+
+.form-validation-error {
+
+border: 1px solid red !important;
+
+-moz-box-shadow: 0 0 2px red !important;
+
+-webkit-box-shadow: 0 0 2px red !important;
+
+box-shadow: 0 0 2px red !important;
+
+}

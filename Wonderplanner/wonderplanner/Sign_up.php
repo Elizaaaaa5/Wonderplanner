@@ -31,7 +31,15 @@
 			<link rel="stylesheet" type="text/css" href="assets/Login_v1/css/util.css">
 			<!--<link rel="stylesheet" type="text/css" href="assets/Login_v1/css/main.css">
 		<!==============================================================================================-->
+		<?php
+		    if(isset($_POST['submit'])) {
+		      $sbm = $db->prepare("INSERT INTO users (FIRST_NAME, LAST_NAME, EMAIL, ADDRESS, CITY, STATE, ZIPCODE, PASSWORD) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		      $hashpass = password_hash($_POST['password_1'], PASSWORD_DEFAULT);
+		      $sbm->bind_param("sssssssss", $_POST['contact_name'], $_POST['contact_lname'], $_POST['contact_email'], $_POST['contact_address'], $_POST['contact_city'], $_POST['contact_state'], $_POST['contact_zipcode'], $hashpass);
+		      $sbm->execute();
 
+		  }
+		  ?>
 	</head>
 	<body class="homepage">
 		<div id="page-wrapper">
@@ -61,52 +69,52 @@
 						<form method="post" action="server.php" >
 							<div class="row 50%">
 									<div class="6u 12u(mobile)">
-										<label for="name" align="left">First Name</label>
-										<input  type="text" pattern="^[a-zA-Z0-9._-]{3,}$" name="name" id="contact-name" placeholder="First Name" required>
+										<label for="name" align="left">First Name<font color="red">*</font></label>
+										<input type="text" pattern="^[a-zA-Z0-9._-]{3,}$" name="name" id="contact_name" placeholder="First Name" required>
 									</div>
 									<div class="6u 12u(mobile)">
-										<label for="lname" align="left">Last Name</label>
-										<input type="text"  pattern="^[a-zA-Z0-9._-]{3,}$" name="lname" id="contact-lname" placeholder="Last Name" required>
+										<label for="lname" align="left">Last Name<font color="red">*</font></label>
+										<input type="text"  pattern="^[a-zA-Z0-9._-]{3,}$" name="lname" id="contact_lname" placeholder="Last Name" required>
 									</div>
 								</div>
 								<div class="row">
 									<div class="12u">
-										<label for="email" align="left">Email</label>
-										<input type="text"  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="email" id="contact-email" placeholder="Email" required>
+										<label for="email" align="left">Email<font color="red">*</font></label>
+										<input type="text"  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="email" id="contact_email" placeholder="you@example.edu" required>
 									</div>
 								</div>
 								<div class="row">
 									<div class="12u">
-										<label for="password" align="left">Password</label>
-										<input type="password"  name="password" id="contact-password" placeholder="Password"
+										<label for="password" align="left">Password<font color="red">*</font></label>
+										<input type="password"  name="password" id="contact_password" placeholder="Password"
 										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one
 										number and one uppercase and lowercase letter, and at least 8 or more characters" required>
 									</div>
 								</div>
 								<div class="row">
 									<div class="12u">
-										<label for="password2" align="left">Comfirm Password</label>
-										<input type="password" name="password2" id="contact-password2" onchange="validatePassword()"placeholder="Confirm Password" required>
+										<label for="password2" align="left">Comfirm Password<font color="red">*</font></label>
+										<input type="password" name="password2" id="contact_password2" onchange="validatePassword()"placeholder="Confirm Password" required>
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="12u">
-										<label for="address" align="left">Address</label>
-										<input type="text" name="address" id="contact-address" pattern="^([0-9]+ )?[a-zA-Z ]+$" placeholder="Address"required>
+										<label for="address" align="left">Address<font color="red">*</font></label>
+										<input type="text" name="address" id="contact_address" pattern="^([0-9]+ )?[a-zA-Z ]+$" placeholder="### Street Name"required>
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="12u">
-										<label for="city" align="left">City</label>
-										<input type="text" name="city" id="contact-city" placeholder="City" pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$"required>
+										<label for="city" align="left">City<font color="red">*</font></label>
+										<input type="text" name="city" id="contact_city" placeholder="City" pattern="^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$"required>
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="12u">
-										<label for="state" align="left">State</label>
+										<label for="state" align="left">State<font color="red">*</font></label>
 										<select  name="state">
 											<option value=''>Choose a State</option>
 										   <option value='AK'>Alaska</option>
@@ -167,8 +175,8 @@
 
 								<div class="row">
 									<div class="12u">
-										<label for="zipcode" align="left">Zipcode</label>
-										<input type="text" name="zipcode" id="contact-zipcode" placeholder="Zipcode" pattern="^\d{5}(?:[-\s]\d{4})?$"required>
+										<label for="zipcode" align="left">Zipcode<font color="red">*</font></label>
+										<input type="text" name="zipcode" id="contact_zipcode" placeholder="xxxxx" pattern="^\d{5}(?:[-\s]\d{4})?$"required>
 									</div>
 								</div>
 
@@ -178,7 +186,7 @@
 								<div class="12u">
 									<ul class="actions">
 										<!-- <li><input type="submit" class="style1" value="Sign Up Now" /></li> -->
-										<button type="submit" class="style1" name="reg_user">Sign Up Now</button>
+										<button type="submit" class="style1" name="submit">Sign Up Now</button>
 										<li><input type="reset" class="style2" value="Reset" /></li>
 									</ul>
 								</div>
@@ -220,8 +228,8 @@
 
 
 				<script>
-					var password = document.getElementById("contact-password")
-					  , confirm_password = document.getElementById("contact-password2");
+					var password = document.getElementById("contact_password")
+					  , confirm_password = document.getElementById("contact_password2");
 					function validatePassword(){
 					  if(password.value != confirm_password.value) {
 					    confirm_password.setCustomValidity("Passwords Do Not Match");
@@ -230,7 +238,7 @@
 				</script>
 
 				<script>
-				var pass = document.getElementById("contact-password");
+				var pass = document.getElementById("contact_password");
 				var letter = document.getElementById("letter");
 				var capital = document.getElementById("capital");
 				var number = document.getElementById("number");
