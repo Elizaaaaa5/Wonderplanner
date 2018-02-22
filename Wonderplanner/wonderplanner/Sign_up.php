@@ -101,7 +101,7 @@
 								<div class="row">
 									<div class="12u">
 										<label for="address" align="left">Address<font color="red">*</font></label>
-										<input type="text" name="contact_address" id="contact_address" pattern="^([0-9]+ )?[a-zA-Z ]+$" placeholder="### Street Name"required>
+										<input type="text" name="contact_address" id="contact_address" pattern="^[A-Za-z0-9'\.\-\s\,]" placeholder="### Street Name"required>
 									</div>
 								</div>
 
