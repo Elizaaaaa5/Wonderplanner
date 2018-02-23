@@ -1,89 +1,82 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db = "wonderplanner";
+// $servername = "localhost";
+// $username = "root";
+// $PASSWORD = "";
+// $db = "phpmyadmin";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $db);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-    echo "connection failed";
+//$conn = new mysqli($servername, $username, $PASSWORD, $db);
+
+	$conn = mysqli_connect('localhost', 'root', '', 'phpmyadmin');
+	// Check connection
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+		echo "connection failed";
+	}
+
+	// initializing variables
+	$FIST_NAME = "";
+	$LAST_NAME = "";
+	$EMAIL = "";
+	$PASSWORD = "";
+	$ADDRESS="";
+	$CITY="";
+	$STATE="";
+	$ZIPCODE="";
+
+	// REGISTER USER
+	if (isset($_POST['submit'])) {
+ 
+	  $FIRST_NAME = $_POST['contact_name'];
+	  $LAST_NAME = $_POST['contact_lname'];
+	  $EMAIL = $_POST['contact_email'];
+	  $PASSWORD = $_POST['contact_password'];
+	  $ADDRESS = $_POST['contact_address'];
+	  $CITY = $_POST['contact_city'];
+	  $STATE = $_POST['contact_state'];
+	  $ZIPCODE = $_POST['contact_zipcode'];
+  	
+  // first check the database to make sure 
+  // a user does not already exist with the same username and/or email
+ 
+ $user_check_query = "SELECT * FROM users WHERE contact_email='$EMAIL' LIMIT 1";
+  $result = mysqli_query($db, $user_check_query);
+  $user = mysqli_fetch_assoc($result);
+  
+  if ($user) { // if user exists
+    if ($user['contact_email'] === $EMAIL) {
+      array_push($errors, "email already exists");
+    }
+  }
+
+  	// $sql_e = "SELECT * FROM users WHERE contact_email ='$EMAIL'";
+  	// $res_e = mysqli_query($conn, $sql_e);
+
+  	// if(mysqli_num_rows($res_e) > 0){
+  	  // $email_error = "Sorry, this email already taken!"; 	
+  	// }else{
+           // exit();
+	// }
+    // Finally, register user if there are no errors in the form
+    if (count($errors) == 0) {
+    	// $PASSWORD = md5($PASSWORD);//encrypt the PASSWORD before saving in the database
+
+    	$sbm = $conn->prepare("INSERT INTO users (FIRST_NAME, LAST_NAME, EMAIL, ADDRESS, CITY, STATE, ZIPCODE, PASSWORD) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+		$hashpass = password_hash($_POST['contact_password'], PASSWORD_DEFAULT);
+		$sbm->bind_param("ssssssss", $_POST['contact_name'], $_POST['contact_lname'], $_POST['contact_email'], $_POST['contact_address'], $_POST['contact_city'], $_POST['contact_state'], $_POST['contact_zipcode'], $hashpass);
+		$sbm->execute();
+    	// $_SESSION['success'] = "You are now logged in";
+		echo("Account created successfully!");
+    	header('location: server.php');
+    }
+
+
+  if ($conn->query(sql) === TRUE) {
+      echo "New record created successfully";
+  } else {
+      echo "Error: " . sql . "<br>" . $conn->error;
+  }
 }
 
-
-
-// // initializing variables
-// $fist_name = "";
-// $last_name = "";
-// $email = "";
-// $password_1 = "";
-// $password_2 = "";
-// $address="";
-// $city="";
-// $state="";
-// $zipcode="";
-//
-// // REGISTER USER
-// if (isset($_POST['submit'])) {
-//   // receive all input values from the form
-//   $first_name = mysqli_real_escape_string($db, $_POST['contact_name']);
-//   $last_name = mysqli_real_escape_string($db, $_POST['contact_lname']);
-//   $email = mysqli_real_escape_string($db, $_POST['contact_email']);
-//   $password_1 = mysqli_real_escape_string($db, $_POST['contact_password']);
-//   $password_2 = mysqli_real_escape_string($db, $_POST['contact_password2']);
-//   $address = mysqli_real_escape_string($db, $_POST['contact_address']);
-//   $city = mysqli_real_escape_string($db, $_POST['contact_city']);
-//   $state = mysqli_real_escape_string($db, $_POST['contact_state']);
-//   $zipcode = mysqli_real_escape_string($db, $_POST['contact_zipcode']);
-//
-//
-//     // form validation: ensure that the form is correctly filled ...
-//     // by adding (array_push()) corresponding error unto $errors array
-//     if (empty($first_name || empty($last_name))) { array_push($errors, "Username is required"); }
-//     if (empty($email)) { array_push($errors, "Email is required"); }
-//     if (empty($password_1)) { array_push($errors, "Password is required"); }
-//     if ($password_1 != $password_2) {
-//   	array_push($errors, "The two passwords do not match");
-//     }
-//
-//     // first check the database to make sure
-//     // a user does not already exist with the same username and/or email
-//     $user_check_query = "SELECT * FROM users WHERE first_name='$first_name' OR email='$email' LIMIT 1";
-//     $result = mysqli_query($db, $user_check_query);
-//     $user = mysqli_fetch_assoc($result);
-//
-//     if ($user) { // if user exists
-//       if ($user['first_name'] === $first_name && $user['last_name'] === $last_name) {
-//         array_push($errors, "Username already exists");
-//       }
-//
-//       if ($user['email'] === $email) {
-//         array_push($errors, "email already exists");
-//       }
-//     }
-//
-//     // Finally, register user if there are no errors in the form
-//     if (count($errors) == 0) {
-//     	$password = md5($password_1);//encrypt the password before saving in the database
-//
-//     	$sql = "INSERT INTO users (first_name, last_name, email, password, address)
-//     			  VALUES('$first_name', '$last_name', '$email','$password', '$address')";
-//     	mysqli_query($db, $sql);
-//     	$_SESSION['$fist_name'] = $first_name;
-//       $_SESSION['$last_name'] = $last_name;
-//     	$_SESSION['success'] = "You are now logged in";
-//     	header('location: server.php');
-//     }
-//
-//
-//   if ($conn->query(sql) === TRUE) {
-//       echo "New record created successfully";
-//   } else {
-//       echo "Error: " . sql . "<br>" . $conn->error;
-//   }
-// }
-//
-//   $conn->close();
+  $conn->close();
   ?>
