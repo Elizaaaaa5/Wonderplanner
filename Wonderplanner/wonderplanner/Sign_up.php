@@ -232,7 +232,6 @@
 			<!--===============================================================================================-->
 				<script src="assets/Login_v1/js/main.js"></script>
 
-
 				<script>
 					var password = document.getElementById("contact_password")
 					  , confirm_password = document.getElementById("contact_password2");
@@ -288,12 +287,12 @@
 							type: 'POST',
 							url: 'server.php',
 							success: function(checkemail) {
-								alert(checkemail);
+								alert("This email is already registered.");
 								$("p").text(checkemail);
 
 							}
 						}
-					});
+				)};
 			</script>
 
 	</body>

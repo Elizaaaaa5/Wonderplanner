@@ -7,7 +7,7 @@
 // Create connection
 //$conn = new mysqli($servername, $username, $PASSWORD, $db);
 
-	$conn = mysqli_connect('localhost', 'root', '', 'phpmyadmin');
+	$conn = mysqli_connect("localhost", "root", "", "phpmyadmin");
 	// Check connection
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
@@ -38,18 +38,20 @@
   	
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email
- function checkemail(){
-    $user_check_query = "SELECT * FROM users WHERE contact_email='$EMAIL' LIMIT 1";
-      $result = mysqli_query($db, $user_check_query);
-      $user = mysqli_fetch_assoc($result);
+    function checkemail(){
+	  // $user_check_query = "SELECT count(*) FROM users WHERE EMAIL = contact_email LIMIT 1";
+      // $result = mysqli_query($db, $user_check_query);
+      // $user = mysqli_fetch_assoc($result);
       
-      if ($user) { // if user exists
-        if ($user['contact_email'] === $EMAIL) {
-          array_push($errors, "email already exists");
-        }
-      }
-    }
-
+      // if ($user_check_query > 0) { // if user exists
+       // if ($user['contact_email'] === $EMAIL) {
+          // array_push($errors, "email already exists");
+       // }
+      // }
+		if (1 === "SELECT count(*) FROM users WHERE EMAIL = 'contact_email' LIMIT 1") {
+			echo "Sorry, this email is already registered!";
+		}
+	}
   	// $sql_e = "SELECT * FROM users WHERE contact_email ='$EMAIL'";
   	// $res_e = mysqli_query($conn, $sql_e);
 
