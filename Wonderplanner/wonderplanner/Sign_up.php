@@ -30,19 +30,6 @@
 			<link rel="stylesheet" type="text/css" href="assets/Login_v1/css/util.css">
 			<!--<link rel="stylesheet" type="text/css" href="assets/Login_v1/css/main.css">
 		<!==============================================================================================-->
-	<!--	
-		    // if(isset($_POST['submit'])) {
-		      // $sbm = $conn->prepare("INSERT INTO users (FIRST_NAME, LAST_NAME, EMAIL, ADDRESS, CITY, STATE, ZIPCODE, PASSWORD) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-		      // $hashpass = password_hash($_POST['contact_password'], PASSWORD_DEFAULT);
-		      // $sbm->bind_param("ssssssss", $_POST['contact_name'], $_POST['contact_lname'], $_POST['contact_email'], $_POST['contact_address'], $_POST['contact_city'], $_POST['contact_state'], $_POST['contact_zipcode'], $hashpass);
-		      // $sbm->execute();
-<<<<<<< HEAD
-
-=======
->>>>>>> d07fc77012da967ee1fcfe27a1de82577a0cfb2d
-
-		  // }
-		  //  --!>
 	</head>
 	<body class="homepage">
 		<div id="page-wrapper">
@@ -83,8 +70,7 @@
 								<div class="row">
 									<div class="12u">
 										<div <?php if (isset($email_error)): ?> class="form_error" <?php endif ?> >
-										<label for="email" align="left">Email<font color="red">*</font></label>
-										<input type="text"  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" onchange= "validateEmail()" name="contact_email" id="contact_email" placeholder="you@example.domain" title="you@example.domain"required>
+										<input type="text"  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" onchange= "the_function()" name="contact_email" id="contact_email" placeholder="you@example.domain" title="you@example.domain"required>
 									</div>
 									<?php if (isset($email_error)): ?>
 										<span><?php echo $email_error; ?></span>
@@ -261,65 +247,6 @@
 				
 			<script>
 
-<<<<<<< HEAD
-=======
-				<script>
-				var pass = document.getElementById("contact_password");
-				var letter = document.getElementById("letter");
-				var capital = document.getElementById("capital");
-				var number = document.getElementById("number");
-				var length = document.getElementById("length");
-				// When the user clicks on the password field, show the message box
-				pass.onfocus = function() {
-				  document.getElementById("message").style.display = "block";
-				}
-				// When the user clicks outside of the password field, hide the message box
-				pass.onblur = function() {
-				  document.getElementById("message").style.display = "none";
-				}
-				// When the user starts to type something inside the password field
-				pass.onkeyup = function() {
-				  // Validate lowercase letters
-				  var lowerCaseLetters = /[a-z]/g;
-				  if(pass.value.match(lowerCaseLetters)) {
-				    letter.classList.remove("invalid");
-				    letter.classList.add("valid");
-				  } else {
-				    letter.classList.remove("valid");
-				    letter.classList.add("invalid");
-				}
-				  // Validate capital letters
-				  var upperCaseLetters = /[A-Z]/g;
-				  if(pass.value.match(upperCaseLetters)) {
-				    capital.classList.remove("invalid");
-				    capital.classList.add("valid");
-				  } else {
-				    capital.classList.remove("valid");
-				    capital.classList.add("invalid");
-				  }
-				  // Validate numbers
-				  var numbers = /[0-9]/g;
-				  if(pass.value.match(numbers)) {
-				    number.classList.remove("invalid");
-				    number.classList.add("valid");
-				  } else {
-				    number.classList.remove("valid");
-				    number.classList.add("invalid");
-				  }
-				  // Validate length
-				  if(pass.value.length >= 8) {
-				    length.classList.remove("invalid");
-				    length.classList.add("valid");
-				  } else {
-				    length.classList.remove("valid");
-				    length.classList.add("invalid");
-				  }
-				}
-				</script>
-				
-			<script>
-
->>>>>>> d07fc77012da967ee1fcfe27a1de82577a0cfb2d
 				(function() {
 				var pwd = document.getElementById("contact_password");
 				var show = document.getElementById("showPwd");
@@ -355,19 +282,19 @@
 				}());
 
 			</script>
-			<script>
-					var user_email = document.getElementById("contact_email");
-				
-					function validateEmail(){
-					  $user_check_query = "SELECT * FROM users WHERE contact_email='$EMAIL' LIMIT 1";
-					  var result = mysqli_query('phpmyadmin', $user_check_query);
-					  //$count = mysqli_num_rows($result);
-					  
-					  if (user_email === result) { // if user exists
-						echo 'Sorry, this email is already taken!';
+			<script type="text/javascript">
+				function the_function(){
+						$.ajax({
+							type: 'POST',
+							url: 'server.php',
+							success: function(checkemail) {
+								alert(checkemail);
+								$("p").text(checkemail);
+
+							}
 						}
-					  }
-					}
+					});
 			</script>
+
 	</body>
 </html>
