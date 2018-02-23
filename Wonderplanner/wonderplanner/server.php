@@ -48,6 +48,7 @@
       array_push($errors, "email already exists");
     }
   }
+<<<<<<< HEAD
 
   	// $sql_e = "SELECT * FROM users WHERE contact_email ='$EMAIL'";
   	// $res_e = mysqli_query($conn, $sql_e);
@@ -145,3 +146,37 @@
   //   }
 	// 	$conn->close();
   //   ?>
+=======
+
+  	// $sql_e = "SELECT * FROM users WHERE contact_email ='$EMAIL'";
+  	// $res_e = mysqli_query($conn, $sql_e);
+
+  	// if(mysqli_num_rows($res_e) > 0){
+  	  // $email_error = "Sorry, this email already taken!"; 	
+  	// }else{
+           // exit();
+	// }
+    // Finally, register user if there are no errors in the form
+    if (count($errors) == 0) {
+    	// $PASSWORD = md5($PASSWORD);//encrypt the PASSWORD before saving in the database
+
+    	$sbm = $conn->prepare("INSERT INTO users (FIRST_NAME, LAST_NAME, EMAIL, ADDRESS, CITY, STATE, ZIPCODE, PASSWORD) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+		$hashpass = password_hash($_POST['contact_password'], PASSWORD_DEFAULT);
+		$sbm->bind_param("ssssssss", $_POST['contact_name'], $_POST['contact_lname'], $_POST['contact_email'], $_POST['contact_address'], $_POST['contact_city'], $_POST['contact_state'], $_POST['contact_zipcode'], $hashpass);
+		$sbm->execute();
+    	// $_SESSION['success'] = "You are now logged in";
+		echo("Account created successfully!");
+    	header('location: server.php');
+    }
+
+
+  if ($conn->query(sql) === TRUE) {
+      echo "New record created successfully";
+  } else {
+      echo "Error: " . sql . "<br>" . $conn->error;
+  }
+}
+
+  $conn->close();
+  ?>
+>>>>>>> d07fc77012da967ee1fcfe27a1de82577a0cfb2d
