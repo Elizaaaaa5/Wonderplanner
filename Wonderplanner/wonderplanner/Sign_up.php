@@ -72,9 +72,10 @@
 										<div <?php if (isset($email_error)): ?> class="form_error" <?php endif ?> >
 										<input type="text"  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" onchange= "the_function()" name="contact_email" id="contact_email" placeholder="you@example.domain" title="you@example.domain"required>
 									</div>
-									<?php if (isset($email_error)): ?>
-										<span><?php echo $email_error; ?></span>
-									<?php endif ?>
+									<?php //if (isset($email_error)): ?>
+										<span><?php //echo $email_error; ?></span>
+									<?php //endif ?>
+									
 									</div>
 								</div>
 								<div class="row">
@@ -282,17 +283,21 @@
 
 			</script>
 			<script type="text/javascript">
-				function the_function(){
-						$.ajax({
-							type: 'POST',
-							url: 'server.php',
-							success: function(checkemail) {
-								alert("This email is already registered.");
-								$("p").text(checkemail);
+				// function the_function(){
+						// $.ajax({
+							// type: 'POST',
+							// url: 'server.php',
+							// success: function(checkemail) {
+								// alert("This email is already registered.");
+								// $("p").text(checkemail);
 
-							}
-						}
-				)};
+							// }
+						// }
+				// )};
+				
+				//  checks if the email is in use 
+				
+				
 			</script>
 
 	</body>

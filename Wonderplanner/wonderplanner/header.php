@@ -10,9 +10,8 @@
 							<nav id="nav">
 								<ul>
 									<li class="current"><a href="index.php">Home</a></li>
-									<li>
-										<a href="About_us.php">About Us</a>
-									</li>
+									<li><a href="About_us.php">About Us</a></li>
+									<li><a href="Our_products.php">Our Products</a></li>
 									<li><a href="Sign_up.php">Sign Up</a></li>
 									<li><a href="Login.php">Login</a></li>
 									<li><a href="Contact_us.php">Contact Us</a></li>
