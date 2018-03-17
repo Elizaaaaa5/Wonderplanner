@@ -56,7 +56,7 @@
 
 				<div align="center">
 					<article>
-						<form method="post" action="welcome.php">
+						<form method="post" >
 							<div class="row 50%">
 									<div class="6u 12u(mobile)">
 										<label for="name" align="left">First Name<font color="red">*</font></label>
