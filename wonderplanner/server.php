@@ -64,7 +64,7 @@
 		$sbm->execute();
     	// $_SESSION['success'] = "You are now logged in";
 		echo("Account created successfully!");
-    	header('location: Login.php');
+    	header('location: welcome.php');
 	}
 
 
