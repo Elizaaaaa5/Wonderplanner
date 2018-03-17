@@ -121,8 +121,8 @@
 	?>
 	 
 	<!-- include your own success html here -->
+	<header class="style1"><h2>Thank you for signing up! <br/> A confirmation email is on the way to <br/><font color="#39A6A8"><?php echo ($_POST['email_from']);?>!<h2></header>
 	 
-	Thank you for Signing up!
 	 
 	<?php
 	 
