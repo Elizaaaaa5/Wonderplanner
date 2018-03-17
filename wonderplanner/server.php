@@ -76,11 +76,57 @@
 		$sbm->execute();
     	// $_SESSION['success'] = "You are now logged in";
 		echo("Account created successfully!");
-    	header('location: server.php');
+    	header('location: Sign_up.php');
     }else{
 		echo $errors[0];
 	}
 
+	if(isset($_POST['contact_email'])) {
+ 
+		// EDIT THE 2 LINES BELOW AS REQUIRED
+		$email_to_us = "wonderplannerofficial@gmail.com";
+		$email_to_user = $_POST['contact_email'];
+		$email_subject_user = "Thank you for registration";
+		$email_subject_us = "New User";
+	
+	 
+		$name = $_POST['contact_name']; // required
+		$email_from = $_POST['contact_email']; // required
+		$email_message_user = "Thank you for signing up!\n\n";
+		$email_message_us = "A new user just registered!\n\n";
+	 
+		 
+		function clean_string($string) {
+		  $bad = array("content-type","bcc:","to:","cc:","href");
+		  return str_replace($bad,"",$string);
+		}
+	 
+		 
+	 
+		$email_message .= "Name: ".clean_string($name)."\n";
+		$email_message .= "Email: ".clean_string($email_from)."\n";
+	 
+	// send email to user
+	$headers = 'From: '.$email_from."\r\n".
+	'Reply-To: '.$email_from."\r\n" .
+	'X-Mailer: PHP/' . phpversion();
+	@mail($email_to_user, $email_subject_user, $email_message_user, $headers);  
+
+	// send email to us
+	// $headers = 'From: '.$email_from."\r\n".
+	'Reply-To: '.$email_from."\r\n" .
+	'X-Mailer: PHP/' . phpversion();
+	@mail($email_to_us, $email_subject_us, $email_message_us, $headers);  
+	
+	?>
+	 
+	<!-- include your own success html here -->
+	 
+	Thank you for Signing up!
+	 
+	<?php
+	 
+	}
 
   if ($conn->query(sql) === TRUE) {
       echo "New record created successfully";
@@ -90,4 +136,4 @@
 }
 
   $conn->close();
-  
+?>
