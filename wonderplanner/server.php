@@ -31,31 +31,30 @@
 	  $STATE = $_POST['contact_state'];
 	  $ZIPCODE = $_POST['contact_zipcode'];
   	
-	  // first check the database to make sure a user does not already exist with the same username and/or email
-	  
-
+      // first check the database to make sure a user does not already exist with the same username and/or email
 	  $emailfound=false;
 
-     $sql='select `EMAIL` from `users` where `EMAIL`=?';
-    $stmt=$conn->prepare( $sql );
-    if( $stmt ){
-
-        $stmt->bind_param("s",$_POST['contact_email']);
-        $result=$stmt->execute();
-        if( $result ){
-            $stmt->store_result();
-            $stmt->bind_result( $emailfound );
-            $stmt->fetch();
-            $stmt->free_result();
-        }
-    }
-
-    if( $emailfound ){
-        echo 'Sorry, that email address already exists in our database. Please try again with a different address.';
-        $stmt->close();
-        $conn->close();
-
-    } else {
+	  $sql='select `EMAIL` from `users` where `EMAIL`=?';
+	 $stmt=$conn->prepare( $sql );
+	 if( $stmt ){
+ 
+		 $stmt->bind_param("s",$_POST['contact_email']);
+		 $result=$stmt->execute();
+		 if( $result ){
+			 $stmt->store_result();
+			 $stmt->bind_result( $emailfound );
+			 $stmt->fetch();
+			 $stmt->free_result();
+		 }
+	 }
+ 
+	 if( $emailfound ){
+		 echo 'Sorry, that email address already exists in our database. Please try again with a different address.';
+		 $stmt->close();
+		 $conn->close();
+ 
+	 } else {
+    // Finally, register user if there are no errors in the form
     	// $PASSWORD = md5($PASSWORD);//encrypt the PASSWORD before saving in the database
 
     	$sbm = $conn->prepare("INSERT INTO users (FIRST_NAME, LAST_NAME, EMAIL, ADDRESS, CITY, STATE, ZIPCODE, PASSWORD) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
@@ -64,9 +63,8 @@
 		$sbm->execute();
     	// $_SESSION['success'] = "You are now logged in";
 		echo("Account created successfully!");
-    	header('location: welcome.php');
-	}
-
+    	header('location: Sign_up.php');
+    
 
 	if(isset($_POST['contact_email'])) {
  
@@ -94,8 +92,8 @@
 		$email_message .= "Email: ".clean_string($email_from)."\n";
 	 
 	// send email to user
-	$headers = 'From: '.$email_from."\r\n".
-	'Reply-To: '.$email_from."\r\n" .
+	$headers = 'From: '.$email_to_us."\r\n".
+	'Reply-To: '.$email_to_us."\r\n" .
 	'X-Mailer: PHP/' . phpversion();
 	@mail($email_to_user, $email_subject_user, $email_message_user, $headers);  
 
@@ -108,19 +106,20 @@
 	?>
 	 
 	<!-- include your own success html here -->
-	<header class="style1"><h2>Thank you for signing up! <br/> A confirmation email is on the way to <br/><font color="#39A6A8"><?php echo ($_POST['email_from']);?>!<h2></header>
 	 
+	Thank you for Signing up!
 	 
 	<?php
 	 
 	}
-
-  if ($conn->query(sql) === TRUE) {
-      echo "New record created successfully";
-  } else {
-      echo "Error: " . sql . "<br>" . $conn->error;
-  }
 }
 
-  $conn->close();
+//   if ($conn->query(conn) === TRUE) {
+//       echo "New record created successfully";
+//   } else {
+//       echo "Error: " . conn . "<br>" . $conn->error;
+//   }
+}
+
+//   $conn->close();
 ?>
