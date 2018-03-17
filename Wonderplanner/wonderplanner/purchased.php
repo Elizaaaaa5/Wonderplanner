@@ -43,10 +43,11 @@
 		<div class="wrapper style2">
 
 				<header class="style1" align="right">
-							<h2>Thank you for your purchase!</h2>
+						<h2>Thank you for your purchase!</h2>
 				</header>
 						
 				<header class="style1"><h>We hope you enjoy your event package.</h><br/><h>Any lingering questions or comments? Feel free to email <a href="mailto:wonderplannerofficial@gmail.com">wonderplannerofficial@gmail.com</a></h></header>
+					
 					<br/>
 					<br/>
 					<br/>
