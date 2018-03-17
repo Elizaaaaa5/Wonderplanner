@@ -13,7 +13,7 @@
 
 								<!-- Contact Form -->
 									<section>
-										<form method="post" action="send_form_email.phpp">
+										<form method="post" action="send_form_email.php">
 											<div class="row 50%">
 												<div class="6u 12u(mobile)">
 													<input type="text" name="name" id="contact-name" placeholder="Name" />
