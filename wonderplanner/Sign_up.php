@@ -70,6 +70,7 @@
 								<div class="row">
 									<div class="12u">
 										<div <?php if (isset($email_error)): ?> class="form_error" <?php endif ?> >
+										<label for="lname" align="left">Email<font color="red">*</font></label>
 										<input type="text"  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" onchange= "the_function()" name="contact_email" id="contact_email" placeholder="you@example.domain" title="you@example.domain"required>
 									</div>
 									<?php //if (isset($email_error)): ?>

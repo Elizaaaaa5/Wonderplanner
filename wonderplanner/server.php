@@ -1,4 +1,4 @@
-<?php
+<body bgcolor="#F5C750"><section align="center"><font color="#F5E550"><strong><?php
 
 	$conn = mysqli_connect("localhost", "root", "", "phpmyadmin");
 	
