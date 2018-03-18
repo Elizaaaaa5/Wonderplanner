@@ -1,5 +1,3 @@
-<?php include('server.php') ?>
-
 <!DOCTYPE HTML>
 <!--
 	Escape Velocity by HTML5 UP
