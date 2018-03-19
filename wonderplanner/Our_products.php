@@ -45,11 +45,9 @@
 						<header class="style1" align="right">
 							<h2>Choose Your Perfect Day, Today!</h2>
 						</header>
-						
 						<br/>
 						<br/>
-						<br/>
-						<br/>
+					
 						<div id="highlights" class="container">
 							<div class="row 150%">
 								<div class="4u 12u(mobile)">
@@ -57,6 +55,7 @@
 										<a href="#" class="image featured"><img src="images/familytrip.jpg" alt="" /></a>
 										<h3><a href="#">Family Trip</a></h3>
 										<p>Enjoy a trip to your local zoo, a great picnic and the adventures!</p>
+										<p>0.07 BTC</p>
 										<ul class="actions">
 											<form action="https://test.bitpay.com/checkout" method="post" >
 											  <input type="hidden" name="action" value="checkout" />
@@ -72,6 +71,7 @@
 										<a href="#" class="image featured"><img src="images/romantic.jpg" alt="" /></a>
 										<h3><a href="#">Romantic Date</a></h3>
 										<p>Start with a rose delivered to her door and tour the boardwalk after dinner.</p>
+										<p>0.08 BTC</p>
 										<ul class="actions">
 											<form action="https://test.bitpay.com/checkout" method="post" >
 											  <input type="hidden" name="action" value="checkout" />
@@ -87,6 +87,7 @@
 										<a href="#" class="image featured"><img src="images/business.jpg" alt="" /></a>
 										<h3><a href="#">Business Meeting</a></h3>
 										<p>Fly to the conference and sleep at the top of a 5 star hotel.</p>
+										<p>0.10 BTC</p>
 										<ul class="actions">
 											<form action="https://test.bitpay.com/checkout" method="post" >
 											  <input type="hidden" name="action" value="checkout" />
@@ -98,6 +99,16 @@
 									</section>
 								</div>
 							</div>
+							<section align="center">
+								<header class="style1" align="right">
+									<h2>Bitcoin Converter Tools</h2>
+								</header>
+								<iframe frameBorder="0" scrolling="no" allowtransparency="0" src="https://bitcoinaverage.com/en/widgets?widgetType=price&bgcolor=#FFFFFF&bwidth=1&bcolor=#CCCCCC&cstyle=round&fsize=16px&ffamily=arial&fcolor=#000000&bgTransparent=solid&chartStyle=none&lastUpdateTime=block&currency0=USD&total=1" style="width:250px; height:150px; overflow:hidden; background-color:transparent !important;"></iframe>
+								<section align="center">
+								<iframe frameBorder="0" scrolling="no" allowtransparency="0" src="https://bitcoinaverage.com/en/widgets?widgetType=conversion&bgcolor=#FFFFFF&bwidth=1&bcolor=#CCCCCC&cstyle=round&fsize=16px&ffamily=arial&fcolor=#000000&bgTransparent=solid&chartStyle=none&lastUpdateTime=block&currency0=USD&total=1" style="width:250px; height:275px; overflow:hidden; background-color:transparent !important;"></iframe>
+							</section>
+								
+							</section>
 						</div>
 					</div>
 					
@@ -120,7 +131,15 @@
 
 
 		<!-- Scripts -->
-
+			<script>
+			  (function(b,i,t,C,O,I,N) {
+				window.addEventListener('load',function() {
+				  if(b.getElementById(C))return;
+				  I=b.createElement(i),N=b.getElementsByTagName(i)[0];
+				  I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
+				},false)
+			  })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
+			</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
@@ -138,6 +157,7 @@
 
 			<!--===============================================================================================-->
 				<script src="assets/Login_v1/js/main.js"></script>
+			<script src="/socialshare/scripts/jquery.socialshareprivacy.min.autoload.js"></script>
 
 	</body>
 </html>

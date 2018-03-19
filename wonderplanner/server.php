@@ -71,13 +71,13 @@
 		// EDIT THE 2 LINES BELOW AS REQUIRED
 		$email_to_us = "wonderplannerofficial@gmail.com";
 		$email_to_user = $_POST['contact_email'];
-		$email_subject_user = "Thank you for registration";
-		$email_subject_us = "New User";
+		$email_subject_user = "Thank you for registering at Wonderplanner!";
+		$email_subject_us = "New User Notification: $EMAIL";
 	
 	 
 		$name = $_POST['contact_name']; // required
 		$email_from = $_POST['contact_email']; // required
-		$email_message_user = "Hey!\n\nThank you for signing up! Here at Wonderplanner, we offer various event packages to help you have the best time at your event, communicate seamlessly between groups, and save money along the way! \n\nLook forward to hearing back from you soon! \n\nCheers, \nWonderplanner Team";
+		$email_message_user = "Hey!\n\nThank you for signing up! Here at Wonderplanner, we offer various event packages to help you have the best time at your event, communicate seamlessly between groups, and save money along the way! \n\nLooking forward to hear back from you soon! \n\nCheers, \nThe Wonderplanner Team";
 		$email_message_us = "A new user just registered!\n\n";
 	 
 		 
