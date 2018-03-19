@@ -77,7 +77,7 @@
 	 
 		$name = $_POST['contact_name']; // required
 		$email_from = $_POST['contact_email']; // required
-		$email_message_user = "Thank you for signing up!\n\n";
+		$email_message_user = "Hey!\n\nThank you for signing up! Here at Wonderplanner, we offers various event packages to help you have the best time at your event, communicate seamlessly between groups, and save money along the way! \n\nLook forward to hear from you soon! \n\nCheers, \nWonderplanner Team";
 		$email_message_us = "A new user just registered!\n\n";
 	 
 		 
