@@ -50,7 +50,7 @@
 				 
 					// EDIT THE 2 LINES BELOW AS REQUIRED
 					$email_to = "wonderplannerofficial@gmail.com";
-					$email_subject = "Your email subject line";
+					$email_subject = "A message from Wonder Planner user";
 				 
 					function died($error) {
 						// your error code can go here
@@ -97,7 +97,7 @@
 					died($error_message);
 				  }
 				 
-					$email_message = "Form details below.\n\n";
+					$email_message = "Message details below.\n\n";
 				 
 					 
 					function clean_string($string) {
