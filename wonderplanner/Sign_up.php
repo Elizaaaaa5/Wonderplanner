@@ -60,11 +60,11 @@
 							<div class="row 50%">
 									<div class="6u 12u(mobile)">
 										<label for="name" align="left">First Name<font color="red">*</font></label>
-										<input type="text" pattern="^[a-zA-Z-]{3,}$" name="contact_name" id="contact_name" placeholder="First Name" title="First name must be at least 3 characters and may not have any special characters except '-'" required>
+										<input type="text" pattern="^[a-zA-Z-]{2,}$" name="contact_name" id="contact_name" placeholder="First Name" title="First name must be at least 2 characters and may not have any special characters except '-'" required>
 									</div>
 									<div class="6u 12u(mobile)">
 										<label for="lname" align="left">Last Name<font color="red">*</font></label>
-										<input type="text"  pattern="^[a-zA-Z-]{3,}$" name="contact_lname" id="contact_lname" placeholder="Last Name" title="Last name must be at least 3 characters and may not have any special characters except '-'" required>
+										<input type="text"  pattern="^[a-zA-Z-]{2,}$" name="contact_lname" id="contact_lname" placeholder="Last Name" title="Last name must be at least 2 characters and may not have any special characters except '-'" required>
 									</div>
 								</div>
 								<div class="row">
