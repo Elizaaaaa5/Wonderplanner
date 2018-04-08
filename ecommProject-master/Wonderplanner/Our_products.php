@@ -28,16 +28,6 @@
 			<link rel="stylesheet" type="text/css" href="assets/Login_v1/css/util.css">
 			<!--<link rel="stylesheet" type="text/css" href="assets/Login_v1/css/main.css">
 		<!==============================================================================================-->
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116059391-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-116059391-1');
-</script>
 	</head>
 	<body class="homepage">
 		<div id="page-wrapper">
@@ -70,9 +60,8 @@
 											<form action="https://test.bitpay.com/checkout" method="post" >
 											  <input type="hidden" name="action" value="checkout" />
 											  <input type="hidden" name="posData" value="" />
-											  <a href=”/goal/wonderplannerunicorn" onclick=”javascript:pageTracker._trackPageview (‘wonderplannerunicorn’);”target=”blank”>
 											  <input type="hidden" name="data" value="qirB1JNjLtMG+AfKXIWK9vL7PlfX2iZLfANhXwQwlwWtEvajCvLJddyJGytj2gUIVW1+CxP0xyEGvzhAOBZCqY1E31Z5j7g3lVftqlXET4whTGpifw89uXLcuJ7c/BAqxpsb2SokBMWvXjSXAcIAf343RBLgDRiFEX3ABUpYSQqGTwVw7XLxQHcePpagHgTJ8cc+xJ94L2zZJ3Zd6Cgdn3oPzblLqeFNmdkxle+FsMbySzsUWGoiMhMMUtfjKTnqwqJxXuvuJivDv18pevSL4uqgoa6BX+cvlsSim+C9VNPxm3uYts7rPp9DDF6hMVF1EWKv2ltxuoEL8lEOIE2jQfVBliPPH7AIk+l9rkrroRtXxLGniczPf10iMUhqNcH7cCDgq+xNLdchIecaOwc4FcR+iAG8g/1HAErbSjkuoZCTrrsOUBEAG4F6JqzLfFsLNXaHtq4CoMxMGlcSYAW3fg==" />
-											  <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." ></a>
+											  <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
 											</form>
 										</ul>
 									</section>

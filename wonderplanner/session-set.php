@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('login.php') ?>
 <!DOCTYPE HTML>
 <!--
 	Escape Velocity by HTML5 UP
@@ -42,84 +42,15 @@
 				</div>
 		<div class="wrapper style2">
 		<section>
-				<div class="title">Member Log In</div>
-				<header class="style1">
-					<h2>Glad to see you again!</h2>
-				</header>
-				<div class = "row">
-				<div align="center">
-				<article class="8u 24u(mobile) special">
-					<a href="#" class="image featured"><img src="images/romdate.jpg" alt="" /></a>
-				</article>
-				</div>
-				<div align="center">
-					<article>
-						<form method="post" action="session-set.php">
-								<div class="row">
-									<div class="12u">
-										<input type="text" name="email" id="contact-email" placeholder="Email" />
-									</div>
-								</div>
-								<div class="row">
-									<div class="12u">
-										<input type="password" name="password" id="contact-password" placeholder="Password" />
-									</div>
-								</div>
-								<div class="row">
-								<div class="12u">
-									<ul class="actions">
-										<li><input type="submit" class="style1" value="Log in" /></li>
-										<li><input type="reset" class="style2" value="Forgot username/password?" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
-					</article>
-				</div>
-				</div>
-			</section>
-
 			<?php
-				if(isset($_SESSION['login_user'])){
-					header("location: Our_products.php");
-				}
-				
-				
-				if(($_POST(['submit']))){
-					session-start();
-				
-				$error='';
-					if(empty($_POST['contact-email']) || empty($_POST['contact-password'])){
-						
-						$error = "There was an issue logging in. Please try again.";
-					}else{
-					$EMAIL = $_POST['contact_email'];
-					$PASSWORD = $_POST['contact_password'];
-
-					$EMAIL = stripslashes($EMAIL);
-					$PASSWORD = stripslashes($PASSWORD);
-					$EMAIL = mysql_real_escape_string($EMAIL);
-					$PASSWORD = mysql_real_escape_string($PASSWORD);
-					
-					$query = mysql_query("select * from users where PASSWORD='$PASSWORD' AND EMAIL='$EMAIL'", $conn);
-					$num = mysql_num_rows($query);
-					if ($rows == 1) {
-					$_SESSION['login_user']=$EMAIL; // Initializing Session
-					
-					header("location: Our_products.php"); // Redirecting To Other Page
-					} else {
-					$error = "Email or Password is invalid.";
-					}
-					mysql_close($connection); // Closing Connection
-					}
-				}
+				echo "Welcome back ".$EMAIL."!"; 
 			?>
+		</section>
+
 			<!-- Footer -->
 				<div id="footer-wrapper" class="wrapper">
 				    <?php include("footer.php");?>
 				</div>
-				
-				
 
 		</div>
 
