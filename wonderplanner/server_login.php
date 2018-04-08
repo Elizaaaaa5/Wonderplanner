@@ -65,5 +65,41 @@
 		}
 	}
 
+				<?php
+				if(isset($_SESSION['login_user'])){
+					header("location: Our_products.php");
+				}
+				
+				
+				if(($_POST(['submit']))){
+					session-start();
+				
+				$error='';
+					if(empty($_POST['contact-email']) || empty($_POST['contact-password'])){
+						
+						$error = "There was an issue logging in. Please try again.";
+					}else{
+					$EMAIL = $_POST['contact_email'];
+					$PASSWORD = $_POST['contact_password'];
+
+					$EMAIL = stripslashes($EMAIL);
+					$PASSWORD = password_hash($PASSWORD);
+					$EMAIL = mysql_real_escape_string($EMAIL);
+					$PASSWORD = mysql_real_escape_string($PASSWORD);
+					
+					$query = mysql_query("select * from users where PASSWORD='$PASSWORD' AND EMAIL='$EMAIL'", $conn);
+					$num = mysql_num_rows($query);
+					if ($rows == 1) {
+					$_SESSION['login_user']=$EMAIL; // Initializing Session
+					
+					header("location: Our_products.php"); // Redirecting To Other Page
+					} else {
+					$error = "Email or Password is invalid.";
+					}
+					mysql_close($connection); // Closing Connection
+					}
+				}
+			?>
+			
   $conn->close();
   

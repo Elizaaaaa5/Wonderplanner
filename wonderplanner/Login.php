@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('server_login.php') ?>
 <!DOCTYPE HTML>
 <!--
 	Escape Velocity by HTML5 UP
@@ -97,7 +97,7 @@
 					$PASSWORD = $_POST['contact_password'];
 
 					$EMAIL = stripslashes($EMAIL);
-					$PASSWORD = stripslashes($PASSWORD);
+					$PASSWORD = password_hash($PASSWORD);
 					$EMAIL = mysql_real_escape_string($EMAIL);
 					$PASSWORD = mysql_real_escape_string($PASSWORD);
 					
