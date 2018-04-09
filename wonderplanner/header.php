@@ -1,5 +1,6 @@
 <!--<div id="header-wrapper" class="wrapper">-->
 					<!--<div id="header">-->
+					<?php include ("server_login.php")?>
 					   <!-- Logo -->
 							<div id="logo">
 								<h1><a href="index.html"><font size="17" color ="white">Wonder Planner</font></a></h1>

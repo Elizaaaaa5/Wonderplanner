@@ -53,6 +53,8 @@
 					
 					//Getting the hashed password from that row
 					$pass_row = $row['PASSWORD'];
+					$fname = $row['FIRST_NAME'];
+					$lname = $row['LAST_NAME'];
 					
 					if(password_verify($PASSWORD, $pass_row)){				
 						/* Password is correct, so start a new session and
@@ -61,7 +63,7 @@
 						session_start();
 						$_SESSION['user_email'] = $EMAIL;   
 						$_SESSION['logged_in'] = true;
-						header("location: Our_products.php");
+						header("location: memberhome.php");
 					} else{
 						// Display an error message if password is not valid
 						echo 'Invalid Password. Please try again.';
