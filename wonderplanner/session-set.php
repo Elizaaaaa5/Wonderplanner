@@ -42,6 +42,41 @@
 				</div>
 		<div class="wrapper style2">
 		<section>
+				<?php session_start(); ?>
+
+				<?php
+					function reject($entry)
+					{
+						echo 'Please <a href="Login.php">Log in </a>';
+						exit();
+					}
+
+					if (isset($_POST['user']))
+					{
+						$user = trim($_POST['user']);
+						if (!ctype_alnum($user))   // ctype_alnum() check if the values contain only alphanumeric data
+						reject('User Name');
+
+							if (isset($_POST['pwd']))
+							{
+								$pwd = trim($_POST['pwd']);
+								if (!ctype_alnum($pwd))
+								reject('Password');
+								else
+								{
+									$_SESSION['user'] = $user;
+									$_SESSION['pwd'] = $pwd;
+
+									// relocate the browser to another page using the header() function to specify the target URL
+									header('Location: session-get.php');
+								}
+							}
+					}
+					else  
+						header('Location: Login.php');
+
+				?>
+			
 			<?php
 				echo "Welcome back ".$EMAIL."!"; 
 			?>

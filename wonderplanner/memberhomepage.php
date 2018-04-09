@@ -31,9 +31,44 @@
 							<div class="8u 12u(mobile)">
 								<!-- Content -->
 									<div id="content">
+									
+										<?php
+											session_start();
+
+											$login_redirect = "Login.php";
+											$user = $_SESSION['user_email'];
+											// Checking if the session is set
+											if(!isset($_SESSION['user_email']) || empty($_SESSION['user_email'])){
+
+											echo 'Please log in to view this page. You will be redirected in 5 seconds.';
+
+											echo '<META HTTP-EQUIV=REFRESH CONTENT="5; '.$login_redirect.'">';
+
+											exit;
+											}else{
+											// echo "<i class=\"fa fa-user fa-1x\">";
+											// echo 'Welcome back, ' . $_SESSION['user_email'] . '!';
+											// echo "</i>";
+											}
+										?>
+										
+										<nav>
+										  <ul>
+											<li><i class="fa fa-user fa-1x"> Logged in as <?php echo ($user)?></i></li>
+										  </ul>
+										</nav>
+
+										<script>
+										  document.addEventListener('DOMContentLoaded', function () {
+											$('nav li').on('click', function () {
+											  alert('Currently logged in as <?php echo $user?>');
+											});
+										  });
+										</script>
+										
 										<article class="box post">
 											<header class="style1">
-												<h2>OUR MISSION</h2>
+												<h2>MEMBER HOMEPAGE</h2>
 											</header>
 																						<p>
 												Tired of Yelp and making calls for reservations? Wonder Planner takes the hassle out

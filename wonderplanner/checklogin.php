@@ -1,4 +1,4 @@
-<?php include('server_login.php') ?>
+<?php include('server.php') ?>
 
 <!DOCTYPE HTML>
 <!--
@@ -56,18 +56,18 @@
 						// Starting the session
 						session_start();
 
-							$login_redirect = "Login.php";
-							
-							// Checking if the session is set
-							if(!isset($_SESSION['user_email']) || empty($_SESSION['user_email'])){
-							
-							echo 'Please log in to view this page. You will be redirected in 5 seconds.';
-							
-							echo '<META HTTP-EQUIV=REFRESH CONTENT="5; '.$login_redirect.'">';
-							
-							exit;
+						$login_redirect = "Login.php";
+						
+						// Checking if the session is set
+						if(!isset($_SESSION['user_name']) || empty($_SESSION['user_name'])){
+						
+						echo 'Please log in to view this page. You will be redirected in 5 seconds.';
+						
+						echo '<META HTTP-EQUIV=REFRESH CONTENT="5; '.$login_redirect.'">';
+						
+						exit;
 						}else{
-							echo 'Welcome back, ' . $_SESSION['user_email'] . '!';
+							echo 'Welcome back, ' . '$EMAIL' . '!';
 						}
 					?>
 					
