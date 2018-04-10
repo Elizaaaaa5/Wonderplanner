@@ -4,24 +4,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<script type="text/javascript">
-function correctPromo1() {
-	if(document.getElementById("promocode1") {
-	    window.location = "famtrip.php";
-	    }
-	    }
-	    
-function correctPromo2() {
-	if(document.getElementById("promocode2") {
-	    window.location = "romdate.php";
-	    }
-	    }
-function correctPromo3() {
-	if(document.getElementById("promocode3") {
-	    window.location = "bizmeet.php";
-	    }
-	    }
-</script>
 <html>
 	<head>
 		<title>Wonder Planner</title>
@@ -83,10 +65,6 @@ function correctPromo3() {
 										<h3><a href="#">Family Trip</a></h3>
 										<p>Enjoy a trip to your local zoo, a great picnic and the adventures!</p>
 										<p>0.07 BTC</p>
-										<form action="famtrip.php" method="post">
-Enter Promotional Code: <input type="text" name="promocode1" id="promocode1"><br>
-<input type="submit">
-</form>
 										<ul class="actions">
 											<form action="https://test.bitpay.com/checkout" method="post" >
 											  <input type="hidden" name="action" value="checkout" />
@@ -103,18 +81,15 @@ Enter Promotional Code: <input type="text" name="promocode1" id="promocode1"><br
 										<a href="#" class="image featured"><img src="images/romantic.jpg" alt="" /></a>
 										<h3><a href="#">Romantic Date</a></h3>
 										<p>Start with a rose delivered to her door and tour the boardwalk after dinner.</p>
-										<p>0.08 BTC</p>
-<form action="romdate.php" method="post">
-Enter Promotional Code: <input type="text" name="promocode2" id="promocode2"><br>
-<input type="submit">
-</form>
+										<p>0.07 BTC</p>
+
 										<ul class="actions">
-											<form action="https://test.bitpay.com/checkout" method="post" >
-											  <input type="hidden" name="action" value="checkout" />
-											  <input type="hidden" name="posData" value="" />
-											  <input type="hidden" name="data" value="qirB1JNjLtMG+AfKXIWK9vL7PlfX2iZLfANhXwQwlwWtEvajCvLJddyJGytj2gUIVq1TIrcvebdMR4HwFOQRM1SjgXWX/9465HfxcseRoaWATPMaTkYUrHa8bBCG4L29guv+L0b6jNpCjNpJH4Hnpe7jZLsCcyoHMTdcs2JqioTRSNMzx4MFrRzOCD2cteiy0SMLSlA3+sSOLIxrn6QMvjO8B4OXfBHA8Hf8IvezwT18RnzEq/mpBfFowHpX6jCc2eP96ULvF8UDUp0i0j14RNeEx25jwCUUAO0liMOgQ4s97YN7pkuWGhsdLz5R/jBYh7gvGPlbULGFxIoNwyeNCGrtLAlPaM2kW+Zlls4Damsr1zcWO9txGvchi/fndzTBakB4KxP6YeVIBSnXlRnIAI+qh17WGYOENnPLpa9WAWmHcfX0TnqqiMXMUsDxDMn5iBBHqK05pHTff3XF+H/ZeQ==" />
-											  <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
-											</form>
+                                        <form action="https://test.bitpay.com/checkout" method="post" >
+                                          <input type="hidden" name="action" value="checkout" />
+                                          <input type="hidden" name="posData" value="" />
+                                          <input type="hidden" name="data" value="qirB1JNjLtMG+AfKXIWK9vL7PlfX2iZLfANhXwQwlwWtEvajCvLJddyJGytj2gUIroEcU2yGN5eLHRVx+YhPRIh4iMLmBhsspJwSOmLjVFPatCTY6hPzQ8gH55q0roRMwYJljcpB85L/8bPLY09h1qLwgsS/nLK/DQds76bAwSysvgrBGVMynT3QdTrtvLmdEiowA6TScpUw7lkK5wiJ1b1bIzR/CN+fzUc0FgLMNE0=" />
+                                          <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
+                                        </form>
 										</ul>
 									</section>
 								</div>
@@ -124,10 +99,7 @@ Enter Promotional Code: <input type="text" name="promocode2" id="promocode2"><br
 										<h3><a href="#">Business Meeting</a></h3>
 										<p>Fly to the conference and sleep at the top of a 5 star hotel.</p>
 										<p>0.10 BTC</p>
-<form action="bizmeet.php" method="post">
-Enter Promotional Code: <input type="text" name="promocode3" id="promocode3"><br>
-<input type="submit">
-</form>
+
 										<ul class="actions">
 											<form action="https://test.bitpay.com/checkout" method="post" >
 											  <input type="hidden" name="action" value="checkout" />
@@ -188,4 +160,3 @@ Enter Promotional Code: <input type="text" name="promocode3" id="promocode3"><br
 			<script src="/socialshare/scripts/jquery.socialshareprivacy.min.autoload.js"></script>
 	</body>
 </html>
-

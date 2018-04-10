@@ -4,24 +4,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<script type="text/javascript">
-function correctPromo1() {
-	if(document.getElementById("promocode1") {
-	    window.location = "famtrip.php";
-	    }
-	    }
-	    
-function correctPromo2() {
-	if(document.getElementById("promocode2") {
-	    window.location = "romdate.php";
-	    }
-	    }
-function correctPromo3() {
-	if(document.getElementById("promocode3") {
-	    window.location = "bizmeet.php";
-	    }
-	    }
-</script>
 <html>
 	<head>
 		<title>Wonder Planner</title>
@@ -83,10 +65,6 @@ function correctPromo3() {
 										<h3><a href="#">Family Trip</a></h3>
 										<p>Enjoy a trip to your local zoo, a great picnic and the adventures!</p>
 										<p>0.07 BTC</p>
-										<form action="famtrip.php" method="post">
-Enter Promotional Code: <input type="text" name="promocode1" id="promocode1"><br>
-<input type="submit">
-</form>
 										<ul class="actions">
 											<form action="https://test.bitpay.com/checkout" method="post" >
 											  <input type="hidden" name="action" value="checkout" />
@@ -104,10 +82,7 @@ Enter Promotional Code: <input type="text" name="promocode1" id="promocode1"><br
 										<h3><a href="#">Romantic Date</a></h3>
 										<p>Start with a rose delivered to her door and tour the boardwalk after dinner.</p>
 										<p>0.08 BTC</p>
-<form action="romdate.php" method="post">
-Enter Promotional Code: <input type="text" name="promocode2" id="promocode2"><br>
-<input type="submit">
-</form>
+
 										<ul class="actions">
 											<form action="https://test.bitpay.com/checkout" method="post" >
 											  <input type="hidden" name="action" value="checkout" />
@@ -123,18 +98,15 @@ Enter Promotional Code: <input type="text" name="promocode2" id="promocode2"><br
 										<a href="#" class="image featured"><img src="images/business.jpg" alt="" /></a>
 										<h3><a href="#">Business Meeting</a></h3>
 										<p>Fly to the conference and sleep at the top of a 5 star hotel.</p>
-										<p>0.10 BTC</p>
-<form action="bizmeet.php" method="post">
-Enter Promotional Code: <input type="text" name="promocode3" id="promocode3"><br>
-<input type="submit">
-</form>
+										<p>0.09 BTC</p>
+
 										<ul class="actions">
-											<form action="https://test.bitpay.com/checkout" method="post" >
-											  <input type="hidden" name="action" value="checkout" />
-											  <input type="hidden" name="posData" value="" />
-											  <input type="hidden" name="data" value="qirB1JNjLtMG+AfKXIWK9vL7PlfX2iZLfANhXwQwlwWtEvajCvLJddyJGytj2gUIpINdijW0tAeTOyYyqcpiS509EvuFe7OZZCvh7Bb4V3ZEDI4BTu6DisjDhzbaXM6Ao7W/FxMaK++dzJmnO3UD2juvN61Hc0jdbMUkKQBckvSX4K1gcUnUQj/oly3XDSdkIeX4qkQUyDK60VALyt0L3USlt7GBixZqoROHI7X4vbGpQVjZ1m59p1TqEQQLuthyBp3rhzRQx2C+Ki6KlvKRejMuC1rocZDUJF1v9k+ecDFdiO5tY/eikcETL+gQN8qO2jJXdENSa+wDaVWfRw3km3LckQKJOaLZ/wGqca+Nm8WbunTazOeBc3/1cm9qbwHZBWv/7s+lZH7Zn//9YZ87l9fv8/ffK8/W+LqhiUVHm9LA9RW9fEDNJSuYnOPRI2iDQzm/x1oBp32h4pkm/UaDPkaJJyVHI+rqY+dP3PdZTAAzjViYPi7GieyrvCngM3pvlvf4MRwQXqkplXcZZtwai2qYYC8nkv1Yp6hOlSEhvZk=" />
-											  <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
-											</form>
+<form action="https://test.bitpay.com/checkout" method="post" >
+  <input type="hidden" name="action" value="checkout" />
+  <input type="hidden" name="posData" value="" />
+  <input type="hidden" name="data" value="qirB1JNjLtMG+AfKXIWK9vL7PlfX2iZLfANhXwQwlwWtEvajCvLJddyJGytj2gUIRnUUC/PE96Kn/ranAdW+ESBAu6DoPzO9YtCmfEUu4XQkeUbG/LArDD1US+PgOR77odfCFz0HbhMiCwBZYgm9AVqhVhv7D6DZTWGnyISomrW48SrpPQnjpffl6GUoNGGslvQAzbKGf3EJu2nhBIJEk2tDF1Ac409kT1cOD7v4GBc=" />
+  <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
+</form>
 										</ul>
 									</section>
 								</div>

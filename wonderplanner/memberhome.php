@@ -95,8 +95,8 @@
 								
 							
 										
-								<div class="row 150%">
-									<section class="box">
+								<div class=""row 150%"">
+									<section class="sidebar" align="left">
 										<header>
 											<h2>Your Profile</h2>
 										</header>
@@ -110,155 +110,93 @@
 													<strong>Address:</strong> 267 Mary Munford, Charlottesville, VA 22904</p>
 												</article>
 											</li>
+											<li>
+											<header>
+												<h2>Recent Transactions</h2>
+											</header>
+											<li><a href="#">ORDER # 111-1903680-9989441</a></li>
+											<li><a href="#">ORDER # 111-1903680-9985329</a></li>
+											</li>
+
 										</ul>
 										<ul class="actions">
 										  <li><a href="#" class="button style1">Edit
 										  </a></li>
 										</ul>
 									</section>
-									<div class="6u 12u(mobile)">
-									<section class="box">
-										<header>
-										<h2>See What Others are Saying about Wonder Planner and Their Packages!</h2>
-										</header>
+									<div class="wrapper style3">
+										<div class="title">Reviews</div>
+										<div id="highlights" class="container">
+											<div class="row 150%">
+												<div class="4u 12u(mobile)">
+													<section class="highlight">
+														<strong>The Girls Night Out Package</strong>
+														</p>
+														“I saved so much time using Wonder Planner! My friends and I had the best girls night out, and we didn’t have to worry about a thing because Wonder Planner took care of it all!” - L. Tarjun, member since 2015
+														</p>
+													</section>
+												</div>
+												<div class="4u 12u(mobile)">
+													<section class="highlight">
+														<strong>The Conference/Business Meeting Package</strong> <br> <br>
+														<p>
+														“Wonder Planner has really changed the way that businesses plan corporate events. By partnering with Wonder Planner, we were able to provide all of our employees with a seamless travel experience for our WDYN conference.” - Silver Cloud Inc., proud corporate partner since 2016
+														</p>
 
-											
-
-											<strong>The Girls Night Out Package</strong>
-											</p>
-											“I saved so much time using Wonder Planner! My friends and I had the best girls night out, and we didn’t have to worry about a thing because Wonder Planner took care of it all!” - L. Tarjun, member since 2015
-											</p>
-										
-											<strong>The Conference/Business Meeting Package</strong>
-											<p>
-											“Wonder Planner has really changed the way that businesses plan corporate events. By partnering with Wonder Planner, we were able to provide all of our employees with a seamless travel experience for our WDYN conference.” - Silver Cloud Inc., proud corporate partner since 2016
-											</p>
-
-											
-
-											<strong>The Romantic Date Package</strong>
-											<p>
-											“I couldn’t believe the discount I got on movie tickets and dinner because of Wonder Planner! My date and I had a great time on our first date, and Wonder Planner even took care of the flowers! Thank you Wonder Planner for helping me have a perfect time with my now girlfriend.” - M. Mahoney, new member of 2018
-											</p>
-
-
-									</section>
-									</div>
-							
-								<div class="6u 12u(mobile)">
-								<section class="box">
-								<header>
-								<h2>Thank You!</h2>
-								</header>
-								<p>
-								We want to thank you for being a member! Wonder Planner packages are always changing and being improved, but this time we want to hear from you! As a thank you, we are taking suggestions for what our next three packages should be. Email us at <u><font color="blue">wonderplannerofficial@gmail.com</font></u> and the next idea for a package could be yours! Users who suggested any of the three winning packages will get the one(s) they suggested for <font color="red">FREE!</font>
-
-								</p>
-
-								</section>
-								</div>
-							
-								</div>
-
-								<div class="6u 12u(mobile)">
-								<section class="box">
-								<header>
-								<h2>Attention Standard Package Members:</h2>
-								</header>
-								<p>
-
-								Premium members have the option to customize their packages. Become a Premium member today and get <font color="red">30% off</font> your first customization!
-
-								</p>
-
-
-
-								</section>
-								</div>
-
-								<div class="6u 12u(mobile)">
-								<section class="box">
-								<header>
-								<h2>Keep Your Eyes Out</h2>
-								</header>
-								<p>
-
-								Next week we’re unveiling a new package for <strong>MEMBERS ONLY!</strong> Tag us on Instagram or Facebook <font color="red">(@WonderPlannerOfficial)</font> in a picture of you enjoying a Wonder Planner package and you could win the package for <strong>FREE</strong>!
-
-
-								</p>
-
-
-
-								</section>
-								</div>
-
-								<div class="4u 12u(mobile)">
-
-								<!-- profile -->
-									<div id="sidebar">
-										<section class="box">
-											<header>
-												<h2>Recent Transactions</h2>
-											</header>
-											<li><a href="#">ORDER # 111-1903680-9989441</a></li>
-											<li><a href="#">ORDER # 111-1903680-9985329</a></li>
-										</section>
-
+													</section>
+												</div>
+												<div class="4u 12u(mobile)">
+													<section class="highlight">
+														<strong>The Romantic Date Package</strong> <br><br>
+														<p>
+														“I couldn’t believe the discount I got on movie tickets and dinner because of Wonder Planner! My date and I had a great time on our first date, and Wonder Planner even took care of the flowers! Thank you Wonder Planner for helping me have a perfect time with my now girlfriend.” - M. Mahoney, new member of 2018
+														</p>
+													</section>
+												</div>
+											</div>
+										</div>
 									</div>
 									</div>
-								</div>
-						</div>
+									</div>
+									</div>
+									<div class="wrapper style3">
+										<div class="title">Thank You!</div>
+														<p>
+														We want to thank you for being a member! Wonder Planner packages are always changing and being improved, but this time we want to hear from you! As a thank you, we are taking suggestions for what our next three packages should be. Email us at <u><font color="blue">wonderplannerofficial@gmail.com</font></u> and the next idea for a package could be yours! Users who suggested any of the three winning packages will get the one(s) they suggested for <font color="red">FREE!</font>
+
+														</p>
+										</div>
+									</div>
+
+									</div>
+									<div class="wrapper style3">
+										<div class="title">Attention Standard Members</div>
+													<p>
+
+													Premium members have the option to customize their packages. Become a Premium member today and get <font color="red">30% off</font> your first customization!
+
+													</p>
+										</div>
+									</div>
+									<div class="wrapper style3">
+										<div class="title">Keep Your Eyes Out</div>
+													<p>
+
+													Next week we’re unveiling a new package for <strong>MEMBERS ONLY!</strong> Tag us on Instagram or Facebook <font color="red">(@WonderPlannerOfficial)</font> in a picture of you enjoying a Wonder Planner package and you could win the package for <strong>FREE</strong>!
+
+
+													</p>
+										</div>
+									</div>
+
+
 					</div>
-				</div>
-				</div>
-
-				</div>
-
-			<!-- Highlights -->
-				<div class="wrapper style3">
-					<div class="title">Our Packages</div>
-					<div id="highlights" class="container">
-						<div class="row 150%">
-							<div class="4u 12u(mobile)">
-								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/familytrip.jpg" alt="" /></a>
-									<h3><a href="#">Family Trip</a></h3>
-									<p>Enjoy a trip to your local zoo, a great pinic and the adventures!</p>
-									<ul class="actions">
-										<li><a href="#" class="button style1">Purchase</a></li>
-									</ul>
-								</section>
-							</div>
-							<div class="4u 12u(mobile)">
-								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/romantic.jpg" alt="" /></a>
-									<h3><a href="#">Romantic Date</a></h3>
-									<p>Start with a rose delivered to her door and tour the boardwalk after dinner.</p>
-									<ul class="actions">
-										<li><a href="#" class="button style1">Purchase</a></li>
-									</ul>
-								</section>
-							</div>
-							<div class="4u 12u(mobile)">
-								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/business.jpg" alt="" /></a>
-									<h3><a href="#">Business Meeting</a></h3>
-									<p>Fly to the conference and sleep at the top of a 5 star hotel.</p>
-									<ul class="actions">
-										<li><a href="#" class="button style1">Purchase</a></li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</div>
-				</div>
 			<!-- Footer -->
 				<div id="footer-wrapper" class="wrapper">
 				    <?php include("footer.php");?>
 				</div>
 
-		</div>
+
 		<!-- Scripts -->
 
 			<script src="assets/js/jquery.min.js"></script>

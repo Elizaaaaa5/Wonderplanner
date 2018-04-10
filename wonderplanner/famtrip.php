@@ -4,24 +4,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<script type="text/javascript">
-function correctPromo1() {
-	if(document.getElementById("promocode1") {
-	    window.location = "famtrip.php";
-	    }
-	    }
-	    
-function correctPromo2() {
-	if(document.getElementById("promocode2") {
-	    window.location = "romdate.php";
-	    }
-	    }
-function correctPromo3() {
-	if(document.getElementById("promocode3") {
-	    window.location = "bizmeet.php";
-	    }
-	    }
-</script>
 <html>
 	<head>
 		<title>Wonder Planner</title>
@@ -82,19 +64,14 @@ function correctPromo3() {
 										<a href="#" class="image featured"><img src="images/familytrip.jpg" alt="" /></a>
 										<h3><a href="#">Family Trip</a></h3>
 										<p>Enjoy a trip to your local zoo, a great picnic and the adventures!</p>
-										<p>0.07 BTC</p>
-										<form action="famtrip.php" method="post">
-Enter Promotional Code: <input type="text" name="promocode1" id="promocode1"><br>
-<input type="submit">
-</form>
+										<p>0.06 BTC</p>
 										<ul class="actions">
-											<form action="https://test.bitpay.com/checkout" method="post" >
-											  <input type="hidden" name="action" value="checkout" />
-											  <input type="hidden" name="posData" value="" />
-											  <a href=”/goal/wonderplannerunicorn" onclick=”javascript:pageTracker._trackPageview (‘wonderplannerunicorn’);”target=”blank”>
-											  <input type="hidden" name="data" value="qirB1JNjLtMG+AfKXIWK9vL7PlfX2iZLfANhXwQwlwWtEvajCvLJddyJGytj2gUIVW1+CxP0xyEGvzhAOBZCqY1E31Z5j7g3lVftqlXET4whTGpifw89uXLcuJ7c/BAqxpsb2SokBMWvXjSXAcIAf343RBLgDRiFEX3ABUpYSQqGTwVw7XLxQHcePpagHgTJ8cc+xJ94L2zZJ3Zd6Cgdn3oPzblLqeFNmdkxle+FsMbySzsUWGoiMhMMUtfjKTnqwqJxXuvuJivDv18pevSL4uqgoa6BX+cvlsSim+C9VNPxm3uYts7rPp9DDF6hMVF1EWKv2ltxuoEL8lEOIE2jQfVBliPPH7AIk+l9rkrroRtXxLGniczPf10iMUhqNcH7cCDgq+xNLdchIecaOwc4FcR+iAG8g/1HAErbSjkuoZCTrrsOUBEAG4F6JqzLfFsLNXaHtq4CoMxMGlcSYAW3fg==" />
-											  <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." ></a>
-											</form>
+<form action="https://test.bitpay.com/checkout" method="post" >
+  <input type="hidden" name="action" value="checkout" />
+  <input type="hidden" name="posData" value="" />
+  <input type="hidden" name="data" value="qirB1JNjLtMG+AfKXIWK9vL7PlfX2iZLfANhXwQwlwWtEvajCvLJddyJGytj2gUI9qSVkiPBH5JIvoaqicsES1KigUbPVkEDEW0a8jEXnb7qVxQQy9LStGnWqXr537FYxY3P+squmNwKirbftxdFsMOgAoOsyNz18dLz5ckxxwkMoGfKqiKzxhPdzE46rJv7BPXDAe7o31fbJNj/A2vH2lSZAzEu1/Jjba9Leg09joA=" />
+  <input type="image" src="https://test.bitpay.com/img/button-large.png" border="0" name="submit" alt="BitPay, the easy way to pay with bitcoins." >
+</form>
 										</ul>
 									</section>
 								</div>
@@ -104,10 +81,7 @@ Enter Promotional Code: <input type="text" name="promocode1" id="promocode1"><br
 										<h3><a href="#">Romantic Date</a></h3>
 										<p>Start with a rose delivered to her door and tour the boardwalk after dinner.</p>
 										<p>0.08 BTC</p>
-<form action="romdate.php" method="post">
-Enter Promotional Code: <input type="text" name="promocode2" id="promocode2"><br>
-<input type="submit">
-</form>
+
 										<ul class="actions">
 											<form action="https://test.bitpay.com/checkout" method="post" >
 											  <input type="hidden" name="action" value="checkout" />
@@ -124,10 +98,7 @@ Enter Promotional Code: <input type="text" name="promocode2" id="promocode2"><br
 										<h3><a href="#">Business Meeting</a></h3>
 										<p>Fly to the conference and sleep at the top of a 5 star hotel.</p>
 										<p>0.10 BTC</p>
-<form action="bizmeet.php" method="post">
-Enter Promotional Code: <input type="text" name="promocode3" id="promocode3"><br>
-<input type="submit">
-</form>
+
 										<ul class="actions">
 											<form action="https://test.bitpay.com/checkout" method="post" >
 											  <input type="hidden" name="action" value="checkout" />
@@ -153,6 +124,7 @@ Enter Promotional Code: <input type="text" name="promocode3" id="promocode3"><br
 					</div>
 					
 		</section>
+
 		
 			<!-- Footer -->
 				<div id="footer-wrapper" class="wrapper">
@@ -188,4 +160,3 @@ Enter Promotional Code: <input type="text" name="promocode3" id="promocode3"><br
 			<script src="/socialshare/scripts/jquery.socialshareprivacy.min.autoload.js"></script>
 	</body>
 </html>
-
